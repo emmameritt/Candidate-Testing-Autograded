@@ -11,7 +11,7 @@ let questions = ["Who was the first American woman in space? ",
 "What is the minimum crew size for the ISS? "];
 let correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"]; 
 let candidateAnswers = [];
-//runProgram()
+
 function askForName() {
   candidateName = input.question('What is your name?');
   }
@@ -34,7 +34,7 @@ function gradeQuiz(candidateAnswers){
   
   
 
-console.log(candidateAnswers)
+
 
 
   let grade = 0;  //TODO 3.2 use this variable to calculate the candidates score.
@@ -43,9 +43,17 @@ console.log(candidateAnswers)
      grade = grade+20;
   } 
   };
-  console.log(grade); 
+  console.log(`Overall Grade ${grade}% (${grade/20} of ${questions.length})`);
+  if (grade <= 79) {
+   console.log("Status: FAILED") 
+  } else {
+    console.log("Status: PASSED")
+  }
+  
+
 
   return grade;
+
 }
 
 
